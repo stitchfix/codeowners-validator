@@ -93,7 +93,7 @@ func (v *ValidOwner) Check(ctx context.Context, in Input) (Output, error) {
 		}
 	}
 
-	return bldr.Output(), nil
+	return bldr.Output(), nil 
 }
 
 func isEmailAddress(s string) bool {
@@ -119,14 +119,17 @@ func (v *ValidOwner) isIgnoredOwner(name string) bool {
 
 func (v *ValidOwner) selectValidateFn(name string) func(context.Context, string) *validateError {
 	switch {
+	case isEmailAddress(name):
+		// TODO(mszostok): try to check if e-mail really exists
+		//return func(context.Context, string) *validateError { return nil }
+		//return newValidateError("Not a GitHub team - Email addresses are not permitted: %v", name)
+		return func(_ context.Context, name string) *validateError {
+			return newValidateError("Not valid owner definition, owner must not be an email address %q", name)
+		}
 	case isGithubUser(name):
 		return v.validateGithubUser
 	case isGithubTeam(name):
 		return v.validateTeam
-	case isEmailAddress(name):
-		// TODO(mszostok): try to check if e-mail really exists
-		//return func(context.Context, string) *validateError { return nil }
-		return newValidateError("Not a GitHub team - Email addresses are not permitted: %v", name)
 	default:
 		return func(_ context.Context, name string) *validateError {
 			return newValidateError("Not valid owner definition %q", name)

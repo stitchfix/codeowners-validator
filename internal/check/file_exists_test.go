@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mszostok/codeowners-validator/internal/check"
-	"github.com/mszostok/codeowners-validator/internal/ptr"
+	"github.com/stitchfix/codeowners-validator/internal/check"
+	"github.com/stitchfix/codeowners-validator/internal/ptr"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

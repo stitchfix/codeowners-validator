@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/mszostok/codeowners-validator/internal/check"
-	"github.com/mszostok/codeowners-validator/internal/ptr"
-	"github.com/mszostok/codeowners-validator/pkg/codeowners"
+	"github.com/stitchfix/codeowners-validator/internal/check"
+	"github.com/stitchfix/codeowners-validator/internal/ptr"
+	"github.com/stitchfix/codeowners-validator/pkg/codeowners"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

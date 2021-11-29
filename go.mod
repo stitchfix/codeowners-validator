@@ -1,4 +1,4 @@
-module github.com/mszostok/codeowners-validator
+module github.com/stitchfix/codeowners-validator
 
 go 1.17
 

@@ -125,7 +125,8 @@ func (v *ValidOwner) selectValidateFn(name string) func(context.Context, string)
 		return v.validateTeam
 	case isEmailAddress(name):
 		// TODO(mszostok): try to check if e-mail really exists
-		return func(context.Context, string) *validateError { return nil }
+		//return func(context.Context, string) *validateError { return nil }
+		return newValidateError("Not a GitHub team - Email addresses are not permitted: %v", err)
 	default:
 		return func(_ context.Context, name string) *validateError {
 			return newValidateError("Not valid owner definition %q", name)

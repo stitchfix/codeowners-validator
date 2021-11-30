@@ -126,10 +126,10 @@ func (v *ValidOwner) selectValidateFn(name string) func(context.Context, string)
 	// 	return func(_ context.Context, name string) *validateError {
 	// 		return newValidateError("Not valid owner definition, owner must not be an email address %q", name)
 	// 	}
-	case isGithubUser(name):
-		return v.validateGithubUser
-	case isGithubTeam(name):
-		return v.validateTeam
+	// case isGithubUser(name):
+	// 	return v.validateGithubUser
+	// case isGithubTeam(name):
+	// 	return v.validateTeam
 	default:
 		return func(_ context.Context, name string) *validateError {
 			return newValidateError("Not valid owner definition %q", name)

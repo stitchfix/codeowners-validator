@@ -6,7 +6,7 @@ RUN apk --no-cache add ca-certificates git
 
 FROM scratch
 
-LABEL source=https://github.com/mszostok/codeowners-validator.git
+LABEL source=https://github.com/stitchfix/codeowners-validator.git
 
 COPY ./codeowners-validator /codeowners-validator
 

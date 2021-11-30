@@ -12,7 +12,7 @@ builds:
   - amd64
   - 386
   ldflags:
-    - -s -w -X github.com/mszostok/codeowners-validator/pkg/version.version={{.Version}} -X  github.com/mszostok/codeowners-validator/pkg/version.commit={{.ShortCommit}} -X github.com/mszostok/codeowners-validator/pkg/version.buildDate={{.Date}}
+    - -s -w -X github.com/stitchfix/codeowners-validator/pkg/version.version={{.Version}} -X  github.com/stitchfix/codeowners-validator/pkg/version.commit={{.ShortCommit}} -X github.com/stitchfix/codeowners-validator/pkg/version.buildDate={{.Date}}
   # List of combinations of GOOS + GOARCH + GOARM to ignore.
   # Default is empty.
   ignore:
@@ -44,6 +44,6 @@ dockers:
     binaries:
       - codeowners-validator
     image_templates:
-      - "mszostok/codeowners-validator:latest"
-      - "mszostok/codeowners-validator:{{ .Tag }}"
-      - "mszostok/codeowners-validator:v{{ .Major }}.{{ .Minor }}"
+      - "stitchfix/codeowners-validator:latest"
+      - "stitchfix/codeowners-validator:{{ .Tag }}"
+      - "stitchfix/codeowners-validator:v{{ .Major }}.{{ .Minor }}"

@@ -34,9 +34,9 @@ jobs: # basic units of work in a run
       - run: make tools
       - run: make all
       - run: goose -dir migrations postgres $DATABASE_URL up
-      # - run:
-      #     name: Run unit and integration tests
-      #     command: make test | tee ${TEST_RESULTS}/go-test.out
+      - run:
+          name: Run unit and integration tests
+          command: make test | tee ${TEST_RESULTS}/go-test.out
       - store_artifacts:
           path: spec/pacts
           destination: /pacts

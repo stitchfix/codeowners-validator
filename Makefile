@@ -32,9 +32,9 @@ build:
 # Testing #
 ###########
 
-# test-unit:
-# 	./hack/run-test-unit.sh
-# .PHONY: test-unit
+test-unit:
+	./hack/run-test-unit.sh
+.PHONY: test-unit
 
 # test-integration: build
 # 	./hack/run-test-integration.sh

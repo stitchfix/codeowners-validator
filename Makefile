@@ -8,7 +8,7 @@ export GO111MODULE = on
 export GOPROXY = https://proxy.golang.org
 
 # all: build-race test-unit test-integration test-lint
-all: build-race
+all: build
 .PHONY: all
 
 # When running integration tests on windows machine
@@ -24,9 +24,9 @@ build:
 	go build -o $(BINARY_PATH) ./main.go
 .PHONY: build
 
-build-race:
-	go build -race -o codeowners-validator ./main.go
-.PHONY: build-race
+# build-race:
+# 	go build -race -o codeowners-validator ./main.go
+# .PHONY: build-race
 
 ###########
 # Testing #

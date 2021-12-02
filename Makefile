@@ -31,25 +31,25 @@ build-race:
 # Testing #
 ###########
 
-test-unit:
-	./hack/run-test-unit.sh
-.PHONY: test-unit
+# test-unit:
+# 	./hack/run-test-unit.sh
+# .PHONY: test-unit
 
-test-integration: build
-	./hack/run-test-integration.sh
-.PHONY: test-integration
+# test-integration: build
+# 	./hack/run-test-integration.sh
+# .PHONY: test-integration
 
-test-lint:
-	./hack/run-lint.sh
-.PHONY: test-lint
+# test-lint:
+# 	./hack/run-lint.sh
+# .PHONY: test-lint
 
-test-hammer:
-	go test -count=100 ./...
-.PHONY: test-hammer
+# test-hammer:
+# 	go test -count=100 ./...
+# .PHONY: test-hammer
 
-test-unit-cover-html: test-unit
-	go tool cover -html=./coverage.txt
-.PHONY: cover-html
+# test-unit-cover-html: test-unit
+# 	go tool cover -html=./coverage.txt
+# .PHONY: cover-html
 
 ###############
 # Development #

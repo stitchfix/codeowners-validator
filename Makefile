@@ -7,7 +7,8 @@ export GO111MODULE = on
 # enable consistent Go 1.12/1.13 GOPROXY behavior.
 export GOPROXY = https://proxy.golang.org
 
-all: build-race test-unit test-integration test-lint
+# all: build-race test-unit test-integration test-lint
+all: build-race
 .PHONY: all
 
 # When running integration tests on windows machine

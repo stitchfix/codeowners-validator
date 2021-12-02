@@ -7,7 +7,8 @@ export GO111MODULE = on
 # enable consistent Go 1.12/1.13 GOPROXY behavior.
 export GOPROXY = https://proxy.golang.org
 
-all: build-race test-unit test-integration test-lint
+# all: build-race test-unit test-integration test-lint
+all: build
 .PHONY: all
 
 # When running integration tests on windows machine
@@ -23,9 +24,9 @@ build:
 	go build -o $(BINARY_PATH) ./main.go
 .PHONY: build
 
-build-race:
-	go build -race -o codeowners-validator ./main.go
-.PHONY: build-race
+# build-race:
+# 	go build -race -o codeowners-validator ./main.go
+# .PHONY: build-race
 
 ###########
 # Testing #
@@ -35,21 +36,21 @@ test-unit:
 	./hack/run-test-unit.sh
 .PHONY: test-unit
 
-test-integration: build
-	./hack/run-test-integration.sh
-.PHONY: test-integration
+# test-integration: build
+# 	./hack/run-test-integration.sh
+# .PHONY: test-integration
 
-test-lint:
-	./hack/run-lint.sh
-.PHONY: test-lint
+# test-lint:
+# 	./hack/run-lint.sh
+# .PHONY: test-lint
 
-test-hammer:
-	go test -count=100 ./...
-.PHONY: test-hammer
+# test-hammer:
+# 	go test -count=100 ./...
+# .PHONY: test-hammer
 
-test-unit-cover-html: test-unit
-	go tool cover -html=./coverage.txt
-.PHONY: cover-html
+# test-unit-cover-html: test-unit
+# 	go tool cover -html=./coverage.txt
+# .PHONY: cover-html
 
 ###############
 # Development #

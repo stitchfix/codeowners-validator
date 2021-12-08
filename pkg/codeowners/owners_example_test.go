@@ -3,7 +3,7 @@ package codeowners_test
 import (
 	"fmt"
 
-	"github.com/mszostok/codeowners-validator/pkg/codeowners"
+	"github.com/stitchfix/codeowners-validator/pkg/codeowners"
 )
 
 func ExampleNewFromPath() {

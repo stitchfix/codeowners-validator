@@ -6,7 +6,7 @@ import (
 	"net/mail"
 	"strings"
 
-	"github.com/mszostok/codeowners-validator/internal/ctxutil"
+	"github.com/stitchfix/codeowners-validator/internal/ctxutil"
 
 	"github.com/google/go-github/v29/github"
 	"github.com/pkg/errors"

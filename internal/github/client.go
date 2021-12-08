@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/mszostok/codeowners-validator/pkg/url"
+	"github.com/stitchfix/codeowners-validator/pkg/url"
 
 	"github.com/google/go-github/v29/github"
 	"golang.org/x/oauth2"

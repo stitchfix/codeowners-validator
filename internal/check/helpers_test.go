@@ -3,7 +3,7 @@ package check
 import (
 	"strings"
 
-	"github.com/mszostok/codeowners-validator/pkg/codeowners"
+	"github.com/stitchfix/codeowners-validator/pkg/codeowners"
 )
 
 var FixtureValidCODEOWNERS = `

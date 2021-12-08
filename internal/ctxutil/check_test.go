@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	contextutil "github.com/mszostok/codeowners-validator/internal/ctxutil"
+	contextutil "github.com/stitchfix/codeowners-validator/internal/ctxutil"
 	"github.com/stretchr/testify/assert"
 )
 

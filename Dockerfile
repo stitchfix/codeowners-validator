@@ -8,7 +8,7 @@ FROM scratch
 
 LABEL source=https://github.com/stitchfix/codeowners-validator.git
 
-COPY ./codeowners-validator /codeowners-validator
+#COPY ./codeowners-validator /codeowners-validator
 
 COPY --from=deps /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY --from=deps /usr/bin/git /usr/bin/git

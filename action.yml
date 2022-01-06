@@ -50,7 +50,7 @@ inputs:
 runs:
   using: 'docker'
   image: '870660286712.dkr.ecr.us-east-1.amazonaws.com/mariah-test-ecr-repo:codeowners-validatorv0.6.3'
-  entrypoint: '/codeowners-validator'
+  #entrypoint: '/codeowners-validator'
   env:
     ENVS_PREFIX: "INPUT"
 #TODO: build container separately, make new action that just uses the image. 

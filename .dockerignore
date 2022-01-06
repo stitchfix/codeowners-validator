@@ -1,5 +1,5 @@
 # Ignore everything
-**
+#**
 
 # Allow binary
-!/codeowners-validator
+#!/codeowners-validator

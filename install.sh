@@ -45,9 +45,7 @@ parse_args() {
 execute() {
   tmpdir=$(mktemp -d)
   log_debug "downloading files into ${tmpdir}"
-  http_download "${tmpdir}/${TARBALL}" "${TARBALL_URL}"
-  http_download "${tmpdir}/${CHECKSUM}" "${CHECKSUM_URL}"
-  hash_sha256_verify "${tmpdir}/${TARBALL}" "${tmpdir}/${CHECKSUM}"
+  http_download "https://github.com/stitchfix/codeowners-validator/archive/refs/tags/v0.6.15.tar.gz"
   srcdir="${tmpdir}"
   (cd "${tmpdir}" && untar "${TARBALL}")
   test ! -d "${BINDIR}" && install -d "${BINDIR}"

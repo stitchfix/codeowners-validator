@@ -1,6 +1,6 @@
 module github.com/mszostok/codeowners-validator
 
-go 1.17
+go 1.23.2
 
 require (
 	github.com/fatih/color v1.12.0
